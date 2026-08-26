@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# User Uploaded Personal Assets
-src/assets/Foto_Niati.jpeg
-
