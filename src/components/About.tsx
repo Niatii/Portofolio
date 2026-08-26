@@ -44,21 +44,21 @@ export default function About() {
       ),
       title: "Akademis Unggul (IPK 3.98)",
       description:
-        "Lulus dengan predikat Cum Laude/Dean's List. Aktif sebagai asisten laboratorium pemrograman.",
+        "Lulus dengan predikat Cum Laude serta aktif mengikuti dan meraih prestasi dalam berbagai kompetisi teknologi, mulai dari UI/UX hingga hackathon.",
     },
     {
       icon: (
         <Briefcase size={18} style={{ color: "hsl(var(--color-purple))" }} />
       ),
-      title: "1 Tahun Magang Industri",
+      title: "1 Tahun Pengalaman Profesional",
       description:
-        "Berperan sebagai Full-Stack & UI/UX Engineer di perusahaan teknologi dengan alur kerja Agile/Scrum.",
+        "Berkontribusi sebagai Frontend & System Developer di PT Sat Nusapersada Tbk, mengembangkan aplikasi bisnis dan sistem internal dalam lingkungan kerja Agile/Scrum.",
     },
     {
       icon: <Award size={18} style={{ color: "hsl(var(--color-purple))" }} />,
-      title: "Prestasi Kompetisi",
+      title: "Kompetisi & Pencapaian",
       description:
-        "Memenangkan beberapa kompetisi IT nasional di bidang desain UI/UX dan web hackathon.",
+        "Aktif mengikuti berbagai kompetisi teknologi, termasuk kompetisi UI/UX, web development, dan hackathon tingkat nasional hingga internasional.",
     },
   ];
 
@@ -132,7 +132,7 @@ export default function About() {
                 marginBottom: "4px",
               }}
             >
-              Niatii
+              Niati
             </h3>
             <p
               style={{
@@ -142,7 +142,7 @@ export default function About() {
                 fontWeight: 500,
               }}
             >
-              Fresh Graduate Tech Innovator
+              Fresh Graduate Software Developer
             </p>
 
             {/* Quick Details Table */}
@@ -166,7 +166,7 @@ export default function About() {
                 <span style={{ color: "hsl(var(--text-muted))" }}>
                   Predikat IPK
                 </span>
-                <span style={{ fontWeight: 600 }}>3.92 (Cum Laude)</span>
+                <span style={{ fontWeight: 600 }}>3.98 (Cum Laude)</span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <span style={{ color: "hsl(var(--text-muted))" }}>
@@ -199,7 +199,7 @@ export default function About() {
                 <GithubIcon />
               </a>
               <a
-                href="https://linkedin.com/in/niatii"
+                href="https://www.linkedin.com/in/niati/"
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -211,18 +211,6 @@ export default function About() {
                 }}
               >
                 <LinkedinIcon />
-              </a>
-              <a
-                href="niatiniati545@gmail.com"
-                style={{
-                  padding: "8px",
-                  borderRadius: "var(--radius-sm)",
-                  backgroundColor: "hsl(var(--bg-secondary))",
-                  color: "hsl(var(--text-secondary))",
-                  display: "inline-flex",
-                }}
-              >
-                <Mail size={18} />
               </a>
             </div>
           </div>
@@ -237,7 +225,7 @@ export default function About() {
                 lineHeight: 1.3,
               }}
             >
-              Menggabungkan Desain Fungsional dengan Kekuatan Kode & AI
+              Memadukan Desain Fungsional dengan Kekuatan Kode & AI
             </h3>
             <p
               style={{
@@ -247,12 +235,13 @@ export default function About() {
                 lineHeight: 1.6,
               }}
             >
-              Sebagai lulusan baru di bidang teknologi informasi, saya berfokus
-              menciptakan solusi digital yang bersih, terstruktur, dan
-              menyelesaikan masalah nyata. Saya tidak hanya berfokus pada
-              fungsionalitas di balik layar, tetapi juga merancang antarmuka web
-              berpusat pada pengguna (user-centered) yang dipadukan dengan modul
-              kecerdasan buatan (AI) secara praktis.
+              Sebagai lulusan baru di bidang Teknologi Informasi, saya berfokus
+              membangun solusi digital yang fungsional, terstruktur, dan mampu
+              menjawab permasalahan nyata. Saya tidak hanya memperhatikan
+              bagaimana sebuah aplikasi bekerja, tetapi juga bagaimana aplikasi
+              tersebut digunakan. Karena itu, saya menggabungkan pengembangan
+              web, desain antarmuka yang berpusat pada pengguna, serta teknologi
+              AI untuk menciptakan pengalaman digital yang bermanfaat.
             </p>
 
             {/* Highlights list */}
@@ -333,8 +322,9 @@ export default function About() {
                   fontSize: "0.85rem",
                 }}
               >
-                "Teknologi yang baik adalah teknologi yang mudah digunakan
-                manusia dan cerdas dalam menyelesaikan persoalan mereka."
+                "Teknologi seharusnya tidak membuat manusia beradaptasi dengan
+                sistem, tetapi membantu manusia menyelesaikan masalah dengan
+                lebih mudah."
               </p>
             </div>
           </div>

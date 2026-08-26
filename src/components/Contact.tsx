@@ -1,4 +1,4 @@
-import { Mail, FileText } from 'lucide-react';
+import { Mail } from "lucide-react";
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg
@@ -34,65 +34,94 @@ const LinkedinIcon = ({ size = 20 }: { size?: number }) => (
 
 export default function Contact() {
   return (
-    <section id="contact" className="section" style={{ backgroundColor: 'hsl(var(--bg-secondary) / 0.4)' }}>
+    <section
+      id="contact"
+      className="section"
+      style={{ backgroundColor: "hsl(var(--bg-secondary) / 0.4)" }}
+    >
       <div className="container">
         <div
           className="card"
           style={{
-            maxWidth: '600px',
-            margin: '0 auto',
-            padding: '40px',
-            textAlign: 'center',
-            backgroundColor: 'hsl(var(--bg-card))',
-            border: '1px solid hsl(var(--border-color))',
-            borderRadius: 'var(--radius-md)',
+            maxWidth: "600px",
+            margin: "0 auto",
+            padding: "40px",
+            textAlign: "center",
+            backgroundColor: "hsl(var(--bg-card))",
+            border: "1px solid hsl(var(--border-color))",
+            borderRadius: "var(--radius-md)",
           }}
         >
-          {/* Badge */}
-          <div
+          <h2
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              padding: '4px 12px',
-              borderRadius: 'var(--radius-sm)',
-              backgroundColor: 'hsl(var(--color-purple) / 0.08)',
-              color: 'hsl(var(--color-purple))',
-              fontSize: '0.75rem',
-              fontWeight: 600,
-              marginBottom: '16px',
+              fontSize: "1.8rem",
+              fontWeight: 700,
+              marginBottom: "12px",
             }}
           >
-            <Mail size={12} />
-            <span>HUBUNGI SAYA</span>
-          </div>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '12px' }}>
             Mari Kolaborasi & Berkarya Bersama
           </h2>
-          
-          <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '32px', fontSize: '0.9rem', lineHeight: 1.6 }}>
-            Tertarik untuk merekrut, bekerja sama dalam proyek AI/Web Dev, atau sekadar berdiskusi tentang UI/UX? Silakan hubungi saya melalui jalur resmi di bawah ini.
+
+          <p
+            style={{
+              color: "hsl(var(--text-secondary))",
+              marginBottom: "32px",
+              fontSize: "0.9rem",
+              lineHeight: 1.6,
+            }}
+          >
+            Punya ide, proyek, atau peluang yang ingin dikembangkan bersama?
+            Saya terbuka untuk kolaborasi di bidang Web Development, AI, dan
+            UI/UX. Jangan ragu untuk menghubungi saya.
           </p>
 
           {/* List of clean contact links */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px', textAlign: 'left', maxWidth: '380px', margin: '0 auto 32px' }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+              marginBottom: "32px",
+              textAlign: "left",
+              maxWidth: "380px",
+              margin: "0 auto 32px",
+            }}
+          >
             <a
               href="mailto:niatiniati545@gmail.com"
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '14px',
-                color: 'hsl(var(--text-primary))',
+                display: "flex",
+                alignItems: "center",
+                gap: "14px",
+                color: "hsl(var(--text-primary))",
               }}
               className="contact-link-row"
             >
-              <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div
+                style={{
+                  padding: "8px",
+                  borderRadius: "var(--radius-sm)",
+                  backgroundColor: "hsl(var(--color-purple) / 0.08)",
+                  color: "hsl(var(--color-purple))",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <Mail size={18} />
               </div>
               <div>
-                <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>Email Resmi</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>niatiniati545@gmail.com</div>
+                <div
+                  style={{
+                    fontSize: "0.75rem",
+                    color: "hsl(var(--text-muted))",
+                  }}
+                >
+                  Email Resmi
+                </div>
+                <div style={{ fontSize: "0.85rem", fontWeight: 600 }}>
+                  niatiniati545@gmail.com
+                </div>
               </div>
             </a>
 
@@ -101,19 +130,38 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '14px',
-                color: 'hsl(var(--text-primary))',
+                display: "flex",
+                alignItems: "center",
+                gap: "14px",
+                color: "hsl(var(--text-primary))",
               }}
               className="contact-link-row"
             >
-              <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div
+                style={{
+                  padding: "8px",
+                  borderRadius: "var(--radius-sm)",
+                  backgroundColor: "hsl(var(--color-purple) / 0.08)",
+                  color: "hsl(var(--color-purple))",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <LinkedinIcon size={18} />
               </div>
               <div>
-                <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>LinkedIn</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>linkedin.com/in/niati</div>
+                <div
+                  style={{
+                    fontSize: "0.75rem",
+                    color: "hsl(var(--text-muted))",
+                  }}
+                >
+                  LinkedIn
+                </div>
+                <div style={{ fontSize: "0.85rem", fontWeight: 600 }}>
+                  linkedin.com/in/niati
+                </div>
               </div>
             </a>
 
@@ -122,44 +170,44 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '14px',
-                color: 'hsl(var(--text-primary))',
+                display: "flex",
+                alignItems: "center",
+                gap: "14px",
+                color: "hsl(var(--text-primary))",
               }}
               className="contact-link-row"
             >
-              <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div
+                style={{
+                  padding: "8px",
+                  borderRadius: "var(--radius-sm)",
+                  backgroundColor: "hsl(var(--color-purple) / 0.08)",
+                  color: "hsl(var(--color-purple))",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <GithubIcon size={18} />
               </div>
               <div>
-                <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>GitHub</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>github.com/Niatii</div>
+                <div
+                  style={{
+                    fontSize: "0.75rem",
+                    color: "hsl(var(--text-muted))",
+                  }}
+                >
+                  GitHub
+                </div>
+                <div style={{ fontSize: "0.85rem", fontWeight: 600 }}>
+                  github.com/Niatii
+                </div>
               </div>
             </a>
           </div>
 
           {/* Resume CV Download sleeker section */}
-          <div
-            style={{
-              borderTop: '1px solid hsl(var(--border-color))',
-              paddingTop: '24px',
-              maxWidth: '380px',
-              margin: '0 auto',
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '16px' }}>
-              <FileText size={18} style={{ color: 'hsl(var(--color-purple))' }} />
-              <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>Unduh Curriculum Vitae</span>
-            </div>
-            <button
-              className="btn btn-primary btn-sm"
-              style={{ width: '100%', borderRadius: 'var(--radius-sm)' }}
-              onClick={() => alert('Unduh CV: Berkas CV_Niati.pdf akan segera diunduh.')}
-            >
-              Unduh CV (PDF)
-            </button>
-          </div>
+
         </div>
       </div>
 

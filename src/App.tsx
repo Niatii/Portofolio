@@ -56,7 +56,7 @@ function App() {
         }}
       >
         <div className="container">
-          <p>© {new Date().getFullYear()} Niati.dev. Hak Cipta Dilindungi.</p>
+          <p>© {new Date().getFullYear()} Niati Hak Cipta Dilindungi.</p>
           <p style={{ marginTop: '8px', fontSize: '0.8rem', color: 'hsl(var(--text-muted))' }}>
             Built with React, TypeScript, Vite & Lucide Icons.
           </p>

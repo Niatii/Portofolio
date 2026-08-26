@@ -128,7 +128,7 @@ export default function Hero() {
                     color: "hsl(var(--color-purple))",
                   }}
                 >
-                  8+ Produk
+                  5+ Produk
                 </div>
                 <div
                   style={{

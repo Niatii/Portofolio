@@ -51,15 +51,47 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             fontFamily: 'var(--font-heading)',
             fontSize: '1.4rem',
             fontWeight: 800,
-            background: 'linear-gradient(135deg, hsl(var(--color-purple)), hsl(var(--color-blue)))',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            gap: '10px',
+            textDecoration: 'none',
           }}
         >
-          <span>Niati.dev</span>
+          {/* Stylized Logo Icon */}
+          <div
+            style={{
+              width: "32px",
+              height: "32px",
+              borderRadius: "50%",
+              background: "linear-gradient(135deg, hsl(var(--color-purple)), hsl(var(--color-blue)))",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 4px 10px rgba(168, 85, 247, 0.25)",
+            }}
+          >
+            <svg
+              viewBox="0 0 100 100"
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30 70 V30 H42 L58 56 V30 H70 V70 H58 L42 44 V70 H30 Z"
+                fill="#ffffff"
+              />
+            </svg>
+          </div>
+          <span
+            style={{
+              background: 'linear-gradient(135deg, hsl(var(--text-primary)), hsl(var(--text-muted)))',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            Niati
+          </span>
         </a>
 
         {/* Desktop Navigation Links */}
