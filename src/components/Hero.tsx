@@ -131,7 +131,7 @@ export default function Hero() {
                     color: "hsl(var(--color-purple))",
                   }}
                 >
-                  3.92 / 4.00
+                  3.98 / 4.00
                 </div>
                 <div
                   style={{

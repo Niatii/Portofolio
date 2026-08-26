@@ -52,7 +52,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section" style={{ backgroundColor: 'hsl(var(--bg-secondary) / 0.5)' }}>
+    <section id="contact" className="section" style={{ backgroundColor: 'hsl(var(--bg-secondary) / 0.4)' }}>
       <div className="container">
         <div className="section-header">
           <div
@@ -61,10 +61,10 @@ export default function Contact() {
               alignItems: 'center',
               gap: '6px',
               padding: '4px 12px',
-              borderRadius: 'var(--radius-full)',
-              backgroundColor: 'hsl(var(--color-purple) / 0.1)',
+              borderRadius: 'var(--radius-sm)',
+              backgroundColor: 'hsl(var(--color-purple) / 0.08)',
               color: 'hsl(var(--color-purple))',
-              fontSize: '0.8rem',
+              fontSize: '0.75rem',
               fontWeight: 600,
               marginBottom: '16px',
             }}
@@ -81,117 +81,116 @@ export default function Contact() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '0.8fr 1.2fr',
-            gap: '48px',
-            alignItems: 'start',
-            maxWidth: '1000px',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '32px',
+            alignItems: 'stretch',
+            maxWidth: '960px',
             margin: '0 auto',
           }}
           className="contact-grid"
         >
-          {/* Left Column: Direct Links */}
-          <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '8px' }}>
-              Kontak Langsung
-            </h3>
-            <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '16px', fontSize: '0.98rem' }}>
-              Anda dapat menghubungi saya secara instan melalui kanal-kanal di bawah ini.
-            </p>
+          {/* Left Column: Direct Links Card */}
+          <div
+            className="card"
+            style={{
+              padding: '36px',
+              backgroundColor: 'hsl(var(--bg-card))',
+              textAlign: 'left',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              height: '100%',
+              border: '1px solid hsl(var(--border-color))',
+            }}
+          >
+            <div>
+              <h3 style={{ fontSize: '1.3rem', fontWeight: 600, marginBottom: '12px' }}>
+                Informasi Kontak
+              </h3>
+              <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '28px', fontSize: '0.85rem', lineHeight: 1.6 }}>
+                Silakan hubungi saya melalui jalur resmi di bawah ini untuk peluang karir, kolaborasi proyek, atau sekadar berdiskusi.
+              </p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <a
-                href="mailto:niatii.career@gmail.com"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '16px',
-                  padding: '16px',
-                  borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'hsl(var(--bg-card))',
-                  border: '1px solid hsl(var(--border-color))',
-                  color: 'hsl(var(--text-primary))',
-                }}
-                className="contact-link"
-              >
-                <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.1)', color: 'hsl(var(--color-purple))' }}>
-                  <Mail size={20} />
-                </div>
-                <div>
-                  <div style={{ fontSize: '0.8rem', color: 'hsl(var(--text-muted))' }}>Email Resmi</div>
-                  <div style={{ fontWeight: 500 }}>niatii.career@gmail.</div>
-                </div>
-              </a>
+              {/* List of clean contact links */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '24px' }}>
+                <a
+                  href="mailto:niatiniati545@gmail.com"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '14px',
+                    color: 'hsl(var(--text-primary))',
+                  }}
+                  className="contact-link-row"
+                >
+                  <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Mail size={18} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>Email Resmi</div>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>niatiniati545@gmail.com</div>
+                  </div>
+                </a>
 
-              <a
-                href="https://linkedin.com/in/niatii"
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '16px',
-                  padding: '16px',
-                  borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'hsl(var(--bg-card))',
-                  border: '1px solid hsl(var(--border-color))',
-                  color: 'hsl(var(--text-primary))',
-                }}
-                className="contact-link"
-              >
-                <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-blue) / 0.1)', color: 'hsl(var(--color-blue))' }}>
-                  <LinkedinIcon size={20} />
-                </div>
-                <div>
-                  <div style={{ fontSize: '0.8rem', color: 'hsl(var(--text-muted))' }}>LinkedIn</div>
-                  <div style={{ fontWeight: 500 }}>linkedin.com/in/niatii</div>
-                </div>
-              </a>
+                <a
+                  href="https://linkedin.com/in/niatii"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '14px',
+                    color: 'hsl(var(--text-primary))',
+                  }}
+                  className="contact-link-row"
+                >
+                  <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <LinkedinIcon size={18} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>LinkedIn</div>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>linkedin.com/in/niatii</div>
+                  </div>
+                </a>
 
-              <a
-                href="https://github.com/Niatii"
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '16px',
-                  padding: '16px',
-                  borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'hsl(var(--bg-card))',
-                  border: '1px solid hsl(var(--border-color))',
-                  color: 'hsl(var(--text-primary))',
-                }}
-                className="contact-link"
-              >
-                <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--text-primary) / 0.05)', color: 'hsl(var(--text-primary))' }}>
-                  <GithubIcon size={20} />
-                </div>
-                <div>
-                  <div style={{ fontSize: '0.8rem', color: 'hsl(var(--text-muted))' }}>GitHub</div>
-                  <div style={{ fontWeight: 500 }}>github.com/Niatii</div>
-                </div>
-              </a>
+                <a
+                  href="https://github.com/Niatii"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '14px',
+                    color: 'hsl(var(--text-primary))',
+                  }}
+                  className="contact-link-row"
+                >
+                  <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <GithubIcon size={18} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>GitHub</div>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>github.com/Niatii</div>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            {/* Resume CV Download Card */}
+            {/* Resume CV Download sleeker section */}
             <div
               style={{
-                marginTop: '12px',
-                padding: '20px',
-                borderRadius: 'var(--radius-md)',
-                background: 'linear-gradient(135deg, hsl(var(--color-purple) / 0.1), hsl(var(--color-blue) / 0.1))',
-                border: '1px dashed hsl(var(--color-purple) / 0.3)',
-                textAlign: 'center',
+                borderTop: '1px solid hsl(var(--border-color))',
+                paddingTop: '24px',
               }}
             >
-              <FileText size={32} style={{ color: 'hsl(var(--color-purple))', marginBottom: '12px' }} />
-              <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '8px' }}>Unduh Curriculum Vitae</h4>
-              <p style={{ fontSize: '0.85rem', color: 'hsl(var(--text-secondary))', marginBottom: '16px' }}>
-                Dapatkan salinan PDF resume profesional saya yang berisi detail profil lengkap.
-              </p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                <FileText size={18} style={{ color: 'hsl(var(--color-purple))' }} />
+                <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>Unduh Curriculum Vitae</span>
+              </div>
               <button
                 className="btn btn-primary btn-sm"
-                onClick={() => alert('Fitur unduh CV: CV.pdf akan diunduh.')}
+                style={{ width: '100%', borderRadius: 'var(--radius-sm)' }}
+                onClick={() => alert('Unduh CV: Berkas CV_Niati.pdf akan segera diunduh.')}
               >
                 Unduh CV (PDF)
               </button>
@@ -204,9 +203,13 @@ export default function Contact() {
             style={{
               padding: '36px',
               backgroundColor: 'hsl(var(--bg-card))',
+              border: '1px solid hsl(var(--border-color))',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
             }}
           >
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '24px', textAlign: 'left' }}>
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 600, marginBottom: '20px', textAlign: 'left' }}>
               Kirim Pesan
             </h3>
 
@@ -221,24 +224,24 @@ export default function Contact() {
                   textAlign: 'center',
                 }}
               >
-                <CheckCircle2 size={48} style={{ color: 'hsl(var(--color-green))', marginBottom: '16px' }} />
-                <h4 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '8px', color: 'hsl(var(--color-green))' }}>
+                <CheckCircle2 size={40} style={{ color: 'hsl(var(--color-green))', marginBottom: '12px' }} />
+                <h4 style={{ fontSize: '1.15rem', fontWeight: 600, marginBottom: '6px', color: 'hsl(var(--color-green))' }}>
                   Pesan Terkirim!
                 </h4>
-                <p style={{ color: 'hsl(var(--text-secondary))', fontSize: '0.95rem' }}>
+                <p style={{ color: 'hsl(var(--text-secondary))', fontSize: '0.85rem' }}>
                   Terima kasih atas pesan Anda. Saya akan segera menghubungi Anda kembali secepatnya.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px', textAlign: 'left' }}>
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px', textAlign: 'left' }}>
                 <div>
                   <label
                     htmlFor="name"
                     style={{
                       display: 'block',
-                      fontSize: '0.85rem',
+                      fontSize: '0.8rem',
                       fontWeight: 600,
-                      marginBottom: '8px',
+                      marginBottom: '6px',
                       color: 'hsl(var(--text-primary))',
                     }}
                   >
@@ -253,14 +256,14 @@ export default function Contact() {
                     placeholder="Masukkan nama Anda"
                     style={{
                       width: '100%',
-                      padding: '12px 16px',
+                      padding: '10px 14px',
                       borderRadius: 'var(--radius-sm)',
                       border: '1px solid hsl(var(--border-color))',
                       backgroundColor: 'hsl(var(--bg-primary))',
                       color: 'hsl(var(--text-primary))',
                       outline: 'none',
                       fontFamily: 'var(--font-sans)',
-                      fontSize: '0.95rem',
+                      fontSize: '0.85rem',
                     }}
                   />
                 </div>
@@ -270,9 +273,9 @@ export default function Contact() {
                     htmlFor="email"
                     style={{
                       display: 'block',
-                      fontSize: '0.85rem',
+                      fontSize: '0.8rem',
                       fontWeight: 600,
-                      marginBottom: '8px',
+                      marginBottom: '6px',
                       color: 'hsl(var(--text-primary))',
                     }}
                   >
@@ -287,14 +290,14 @@ export default function Contact() {
                     placeholder="nama@email.com"
                     style={{
                       width: '100%',
-                      padding: '12px 16px',
+                      padding: '10px 14px',
                       borderRadius: 'var(--radius-sm)',
                       border: '1px solid hsl(var(--border-color))',
                       backgroundColor: 'hsl(var(--bg-primary))',
                       color: 'hsl(var(--text-primary))',
                       outline: 'none',
                       fontFamily: 'var(--font-sans)',
-                      fontSize: '0.95rem',
+                      fontSize: '0.85rem',
                     }}
                   />
                 </div>
@@ -304,9 +307,9 @@ export default function Contact() {
                     htmlFor="message"
                     style={{
                       display: 'block',
-                      fontSize: '0.85rem',
+                      fontSize: '0.8rem',
                       fontWeight: 600,
-                      marginBottom: '8px',
+                      marginBottom: '6px',
                       color: 'hsl(var(--text-primary))',
                     }}
                   >
@@ -315,13 +318,13 @@ export default function Contact() {
                   <textarea
                     id="message"
                     required
-                    rows={5}
+                    rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tuliskan pesan atau detail penawaran kerja sama..."
                     style={{
                       width: '100%',
-                      padding: '12px 16px',
+                      padding: '10px 14px',
                       borderRadius: 'var(--radius-sm)',
                       border: '1px solid hsl(var(--border-color))',
                       backgroundColor: 'hsl(var(--bg-primary))',
@@ -329,14 +332,14 @@ export default function Contact() {
                       outline: 'none',
                       resize: 'vertical',
                       fontFamily: 'var(--font-sans)',
-                      fontSize: '0.95rem',
+                      fontSize: '0.85rem',
                       lineHeight: 1.5,
                     }}
                   />
                 </div>
 
-                <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '8px' }}>
-                  Kirim Pesan <Send size={16} />
+                <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '4px' }}>
+                  Kirim Pesan <Send size={14} />
                 </button>
               </form>
             )}
@@ -348,15 +351,14 @@ export default function Contact() {
         @media (max-width: 768px) {
           .contact-grid {
             grid-template-columns: 1fr !important;
-            gap: 40px !important;
+            gap: 24px !important;
           }
         }
-        .contact-link {
-          transition: transform var(--transition-fast), border-color var(--transition-fast) !important;
+        .contact-link-row {
+          transition: transform var(--transition-fast) !important;
         }
-        .contact-link:hover {
-          transform: translateY(-2px);
-          border-color: hsl(var(--color-purple) / 0.5) !important;
+        .contact-link-row:hover {
+          transform: translateX(4px);
         }
       `}</style>
     </section>
