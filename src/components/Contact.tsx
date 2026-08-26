@@ -118,7 +118,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div style={{ fontSize: '0.8rem', color: 'hsl(var(--text-muted))' }}>Email Resmi</div>
-                  <div style={{ fontWeight: 500 }}>niatii.career@gmail.com</div>
+                  <div style={{ fontWeight: 500 }}>niatii.career@gmail.</div>
                 </div>
               </a>
 

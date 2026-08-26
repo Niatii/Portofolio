@@ -1,4 +1,5 @@
-import { ArrowRight, Terminal } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
+import photoImg from "../assets/Foto_Niati.jpeg";
 
 export default function Hero() {
   return (
@@ -6,40 +7,40 @@ export default function Hero() {
       id="home"
       className="section"
       style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        position: 'relative',
-        overflow: 'hidden',
-        paddingTop: '100px',
-        paddingBottom: '60px',
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        position: "relative",
+        overflow: "hidden",
+        paddingTop: "100px",
+        paddingBottom: "60px",
       }}
     >
       <div className="container">
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: '1.1fr 0.9fr',
-            gap: '40px',
-            alignItems: 'center',
+            display: "grid",
+            gridTemplateColumns: "1.1fr 0.9fr",
+            gap: "40px",
+            alignItems: "center",
           }}
           className="hero-grid"
         >
           {/* Hero Left Content */}
-          <div style={{ textAlign: 'left' }}>
+          <div style={{ textAlign: "left" }}>
             <div
               style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '4px 12px',
-                borderRadius: 'var(--radius-sm)',
-                backgroundColor: 'hsl(var(--color-purple) / 0.08)',
-                border: '1px solid hsl(var(--color-purple) / 0.15)',
-                color: 'hsl(var(--color-purple))',
-                fontSize: '0.8rem',
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "4px 12px",
+                borderRadius: "var(--radius-sm)",
+                backgroundColor: "hsl(var(--color-purple) / 0.08)",
+                border: "1px solid hsl(var(--color-purple) / 0.15)",
+                color: "hsl(var(--color-purple))",
+                fontSize: "0.8rem",
                 fontWeight: 600,
-                marginBottom: '20px',
+                marginBottom: "20px",
               }}
             >
               <span>FRESH GRADUATE PORTFOLIO</span>
@@ -47,35 +48,43 @@ export default function Hero() {
 
             <h1
               style={{
-                fontSize: '3rem',
+                fontSize: "3rem",
                 fontWeight: 800,
                 lineHeight: 1.2,
-                letterSpacing: '-0.02em',
-                marginBottom: '20px',
-                fontFamily: 'var(--font-heading)',
+                letterSpacing: "-0.02em",
+                marginBottom: "20px",
+                fontFamily: "var(--font-heading)",
               }}
               className="hero-title"
             >
-              Membangun Web,{' '}
-              <span style={{ color: 'hsl(var(--color-purple))' }}>Integrasi AI</span>, &{' '}
-              <span style={{ color: 'hsl(var(--color-purple))' }}>UI/UX Desain</span> secara Presisi.
+              Membangun Web,{" "}
+              <span style={{ color: "hsl(var(--color-purple))" }}>
+                Integrasi AI
+              </span>
+              , &{" "}
+              <span style={{ color: "hsl(var(--color-purple))" }}>
+                UI/UX Desain
+              </span>{" "}
+              secara Presisi.
             </h1>
 
             <p
               style={{
-                fontSize: '1.05rem',
-                color: 'hsl(var(--text-secondary))',
-                marginBottom: '32px',
-                maxWidth: '560px',
+                fontSize: "1.05rem",
+                color: "hsl(var(--text-secondary))",
+                marginBottom: "32px",
+                maxWidth: "560px",
                 lineHeight: 1.6,
               }}
             >
-              Saya adalah lulusan baru yang berfokus menciptakan solusi web modern, cerdas, 
-              dan berpusat pada pengguna. Menghubungkan fungsionalitas kode yang andal, integrasi model AI, 
-              dan estetika visual bersih yang terasah melalui pembuatan produk digital setiap semester.
+              Saya adalah lulusan baru yang berfokus pada pengembangan solusi
+              web modern, cerdas, dan berpusat pada pengguna. Saya menggabungkan
+              pengembangan aplikasi yang fungsional dan andal dengan integrasi
+              teknologi AI serta desain visual yang bersih untuk membangun
+              produk digital yang relevan dan bermanfaat.
             </p>
 
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <a href="#timeline" className="btn btn-primary">
                 Lihat Portofolio <ArrowRight size={16} />
               </a>
@@ -87,110 +96,102 @@ export default function Hero() {
             {/* Quick Metrics (All Blue Theme) */}
             <div
               style={{
-                display: 'flex',
-                gap: '32px',
-                marginTop: '48px',
-                borderTop: '1px solid hsl(var(--border-color))',
-                paddingTop: '24px',
+                display: "flex",
+                gap: "32px",
+                marginTop: "48px",
+                borderTop: "1px solid hsl(var(--border-color))",
+                paddingTop: "24px",
               }}
               className="hero-metrics"
             >
               <div>
-                <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'hsl(var(--color-purple))' }}>1 Tahun</div>
-                <div style={{ fontSize: '0.8rem', color: 'hsl(var(--text-muted))' }}>Magang Industri</div>
+                <div
+                  style={{
+                    fontSize: "1.5rem",
+                    fontWeight: 700,
+                    color: "hsl(var(--color-purple))",
+                  }}
+                >
+                  1 Tahun
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.8rem",
+                    color: "hsl(var(--text-muted))",
+                  }}
+                >
+                  Magang Industri
+                </div>
               </div>
               <div>
-                <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'hsl(var(--color-purple))' }}>3.92 / 4.00</div>
-                <div style={{ fontSize: '0.8rem', color: 'hsl(var(--text-muted))' }}>IPK Cum Laude</div>
+                <div
+                  style={{
+                    fontSize: "1.5rem",
+                    fontWeight: 700,
+                    color: "hsl(var(--color-purple))",
+                  }}
+                >
+                  3.92 / 4.00
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.8rem",
+                    color: "hsl(var(--text-muted))",
+                  }}
+                >
+                  IPK Cum Laude
+                </div>
               </div>
               <div>
-                <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'hsl(var(--color-purple))' }}>8+ Produk</div>
-                <div style={{ fontSize: '0.8rem', color: 'hsl(var(--text-muted))' }}>Karya Semester</div>
+                <div
+                  style={{
+                    fontSize: "1.5rem",
+                    fontWeight: 700,
+                    color: "hsl(var(--color-purple))",
+                  }}
+                >
+                  8+ Produk
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.8rem",
+                    color: "hsl(var(--text-muted))",
+                  }}
+                >
+                  Karya Semester
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Simple & Clean Browser/Code Editor Mockup on Right */}
-          <div className="animate-float" style={{ width: '100%' }}>
+          {/* User Profile Photo on Right */}
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <div
               style={{
-                backgroundColor: 'hsl(var(--bg-card))',
-                border: '1px solid hsl(var(--border-color))',
-                borderRadius: 'var(--radius-md)',
-                boxShadow: 'var(--shadow-lg)',
-                overflow: 'hidden',
-                textAlign: 'left',
+                width: "100%",
+                maxWidth: "340px",
+                aspectRatio: "1 / 1.15",
+                borderRadius: "var(--radius-lg)",
+                overflow: "hidden",
+                border: "1px solid hsl(var(--border-color))",
+                boxShadow: "var(--shadow-lg)",
+                backgroundColor: "hsl(var(--bg-card))",
               }}
+              className="about-visual-container"
             >
-              {/* Window Header */}
-              <div
+              <img
+                src={photoImg}
+                alt="Niati"
                 style={{
-                  backgroundColor: 'hsl(var(--bg-secondary))',
-                  padding: '12px 16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  borderBottom: '1px solid hsl(var(--border-color))',
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                  transition: "transform var(--transition-slow)",
                 }}
-              >
-                <div style={{ display: 'flex', gap: '6px' }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#ff5f56', display: 'inline-block' }} />
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#ffbd2e', display: 'inline-block' }} />
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#27c93f', display: 'inline-block' }} />
-                </div>
-                <div
-                  style={{
-                    backgroundColor: 'hsl(var(--bg-card))',
-                    fontSize: '0.75rem',
-                    color: 'hsl(var(--text-muted))',
-                    padding: '2px 24px',
-                    borderRadius: '4px',
-                    margin: '0 auto',
-                    fontFamily: 'monospace',
-                    border: '1px solid hsl(var(--border-color))',
-                  }}
-                >
-                  niatii.dev/portfolio
-                </div>
-              </div>
-
-              {/* Editor Code/Design Content */}
-              <div style={{ padding: '24px', fontFamily: 'monospace', fontSize: '0.85rem', color: 'hsl(var(--text-secondary))', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'hsl(var(--color-purple))', fontWeight: 600, borderBottom: '1px solid hsl(var(--border-color))', paddingBottom: '8px' }}>
-                  <Terminal size={14} />
-                  <span>developer.ts</span>
-                </div>
-                
-                <div>
-                  <span style={{ color: 'hsl(var(--color-purple))' }}>const</span> <span style={{ color: 'hsl(var(--text-primary))' }}>profile</span> = &#123;
-                  <div style={{ paddingLeft: '16px', marginTop: '4px' }}>
-                    name: <span style={{ color: 'hsl(var(--color-blue))' }}>"Niatii"</span>,
-                  </div>
-                  <div style={{ paddingLeft: '16px' }}>
-                    role: <span style={{ color: 'hsl(var(--color-blue))' }}>"Developer & Designer"</span>,
-                  </div>
-                  <div style={{ paddingLeft: '16px' }}>
-                    focus: [<span style={{ color: 'hsl(var(--color-blue))' }}>"Web"</span>, <span style={{ color: 'hsl(var(--color-blue))' }}>"AI"</span>, <span style={{ color: 'hsl(var(--color-blue))' }}>"UI/UX"</span>],
-                  </div>
-                  <div style={{ paddingLeft: '16px' }}>
-                    gpa: <span style={{ color: 'hsl(var(--color-purple))' }}>3.92</span>,
-                  </div>
-                  <div style={{ paddingLeft: '16px' }}>
-                    internship: <span style={{ color: 'hsl(var(--color-blue))' }}>"1 Year"</span>,
-                  </div>
-                  <div style={{ paddingLeft: '16px' }}>
-                    passion: <span style={{ color: 'hsl(var(--color-blue))' }}>"Crafting clean digital products"</span>
-                  </div>
-                  &#125;;
-                </div>
-
-                <div style={{ borderTop: '1px solid hsl(var(--border-color))', paddingTop: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <span style={{ color: 'hsl(var(--text-muted))' }}>// Output:</span>
-                  <div style={{ padding: '10px', backgroundColor: 'hsl(var(--bg-secondary))', borderRadius: '4px', fontSize: '0.8rem', color: 'hsl(var(--color-purple))' }}>
-                    &gt; Running build... Successful. 0 errors.
-                  </div>
-                </div>
-              </div>
+                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+              />
             </div>
           </div>
         </div>

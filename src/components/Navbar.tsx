@@ -59,7 +59,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             gap: '8px',
           }}
         >
-          <span>Niatii.dev</span>
+          <span>Niati.dev</span>
         </a>
 
         {/* Desktop Navigation Links */}
