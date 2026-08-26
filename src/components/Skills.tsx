@@ -4,8 +4,7 @@ export default function Skills() {
   const skillCategories = [
     {
       title: 'UI/UX Design',
-      icon: <Palette size={28} style={{ color: 'hsl(var(--color-orange))' }} />,
-      color: 'orange',
+      icon: <Palette size={24} style={{ color: 'hsl(var(--color-purple))' }} />,
       description: 'Mendesain pengalaman digital yang indah, fungsional, dan berpusat pada pengguna.',
       skills: [
         'Figma Prototyping',
@@ -17,8 +16,7 @@ export default function Skills() {
     },
     {
       title: 'Web Development',
-      icon: <Code size={28} style={{ color: 'hsl(var(--color-purple))' }} />,
-      color: 'purple',
+      icon: <Code size={24} style={{ color: 'hsl(var(--color-purple))' }} />,
       description: 'Membangun aplikasi web frontend & backend dengan kode yang bersih dan performa tinggi.',
       skills: [
         'React & TypeScript',
@@ -30,8 +28,7 @@ export default function Skills() {
     },
     {
       title: 'AI Integration',
-      icon: <Cpu size={28} style={{ color: 'hsl(var(--color-blue))' }} />,
-      color: 'blue',
+      icon: <Cpu size={24} style={{ color: 'hsl(var(--color-purple))' }} />,
       description: 'Membawa fungsionalitas cerdas kecerdasan buatan ke dalam produk web modern.',
       skills: [
         'Prompt Engineering',
@@ -53,10 +50,10 @@ export default function Skills() {
               alignItems: 'center',
               gap: '6px',
               padding: '4px 12px',
-              borderRadius: 'var(--radius-full)',
-              backgroundColor: 'hsl(var(--color-purple) / 0.1)',
+              borderRadius: 'var(--radius-sm)',
+              backgroundColor: 'hsl(var(--color-purple) / 0.08)',
               color: 'hsl(var(--color-purple))',
-              fontSize: '0.8rem',
+              fontSize: '0.75rem',
               fontWeight: 600,
               marginBottom: '16px',
             }}
@@ -73,12 +70,11 @@ export default function Skills() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '32px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '24px',
           }}
         >
           {skillCategories.map((cat, idx) => {
-            const accentColor = `var(--color-${cat.color})`;
             return (
               <div
                 key={idx}
@@ -90,54 +86,56 @@ export default function Skills() {
                   height: '100%',
                   position: 'relative',
                   overflow: 'hidden',
-                  padding: '36px 30px',
+                  padding: '30px 24px',
+                  border: '1px solid hsl(var(--border-color))',
+                  borderRadius: 'var(--radius-md)',
                 }}
               >
-                {/* Border Indicator */}
+                {/* Subtle top border indicator in blue */}
                 <div
                   style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
-                    height: '4px',
-                    backgroundColor: `hsl(${accentColor})`,
+                    height: '3px',
+                    backgroundColor: 'hsl(var(--color-purple))',
                   }}
                 />
 
                 <div
                   style={{
                     display: 'inline-flex',
-                    padding: '12px',
-                    borderRadius: 'var(--radius-md)',
-                    backgroundColor: `hsl(${accentColor} / 0.1)`,
+                    padding: '10px',
+                    borderRadius: 'var(--radius-sm)',
+                    backgroundColor: 'hsl(var(--color-purple) / 0.08)',
                     width: 'fit-content',
-                    marginBottom: '24px',
+                    marginBottom: '20px',
                   }}
                 >
                   {cat.icon}
                 </div>
 
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '12px', fontWeight: 700 }}>
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '10px', fontWeight: 700 }}>
                   {cat.title}
                 </h3>
-                <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '28px', fontSize: '0.98rem' }}>
+                <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '24px', fontSize: '0.9rem', lineHeight: 1.5 }}>
                   {cat.description}
                 </p>
 
-                <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {cat.skills.map((skill, sIdx) => (
                     <div
                       key={sIdx}
                       style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '10px',
-                        fontSize: '0.9rem',
+                        gap: '8px',
+                        fontSize: '0.85rem',
                         color: 'hsl(var(--text-primary))',
                       }}
                     >
-                      <CheckCircle size={16} style={{ color: `hsl(${accentColor})`, flexShrink: 0 }} />
+                      <CheckCircle size={14} style={{ color: 'hsl(var(--color-purple))', flexShrink: 0 }} />
                       <span>{skill}</span>
                     </div>
                   ))}

@@ -102,7 +102,7 @@ export default function Timeline() {
   });
 
   return (
-    <section id="timeline" className="section" style={{ backgroundColor: 'hsl(var(--bg-secondary) / 0.3)' }}>
+    <section id="timeline" className="section" style={{ backgroundColor: 'hsl(var(--bg-secondary) / 0.2)' }}>
       <div className="container">
         <div className="section-header">
           <div
@@ -111,10 +111,10 @@ export default function Timeline() {
               alignItems: 'center',
               gap: '6px',
               padding: '4px 12px',
-              borderRadius: 'var(--radius-full)',
-              backgroundColor: 'hsl(var(--color-purple) / 0.1)',
+              borderRadius: 'var(--radius-sm)',
+              backgroundColor: 'hsl(var(--color-purple) / 0.08)',
               color: 'hsl(var(--color-purple))',
-              fontSize: '0.8rem',
+              fontSize: '0.75rem',
               fontWeight: 600,
               marginBottom: '16px',
             }}
@@ -133,8 +133,8 @@ export default function Timeline() {
           style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '12px',
-            marginBottom: '48px',
+            gap: '10px',
+            marginBottom: '40px',
             flexWrap: 'wrap',
           }}
         >
@@ -144,7 +144,7 @@ export default function Timeline() {
               onClick={() => setFilter(cat)}
               className="btn btn-sm"
               style={{
-                borderRadius: 'var(--radius-full)',
+                borderRadius: 'var(--radius-sm)',
                 backgroundColor: filter === cat ? 'hsl(var(--color-purple))' : 'hsl(var(--bg-card))',
                 color: filter === cat ? '#fff' : 'hsl(var(--text-secondary))',
                 borderColor: filter === cat ? 'transparent' : 'hsl(var(--border-color))',
@@ -162,7 +162,7 @@ export default function Timeline() {
         <div
           style={{
             position: 'relative',
-            maxWidth: '900px',
+            maxWidth: '840px',
             margin: '0 auto',
           }}
           className="timeline-container"
@@ -174,7 +174,7 @@ export default function Timeline() {
               left: '50%',
               top: 0,
               bottom: 0,
-              width: '2px',
+              width: '1px',
               backgroundColor: 'hsl(var(--border-color))',
               transform: 'translateX(-50%)',
             }}
@@ -182,7 +182,7 @@ export default function Timeline() {
           />
 
           {/* Timeline Cards */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
             {filteredProjects.map((project, index) => {
               const isEven = index % 2 === 0;
               return (
@@ -202,11 +202,11 @@ export default function Timeline() {
                       position: 'absolute',
                       left: '50%',
                       top: '24px',
-                      width: '16px',
-                      height: '16px',
+                      width: '12px',
+                      height: '12px',
                       borderRadius: '50%',
                       backgroundColor: 'hsl(var(--bg-primary))',
-                      border: '4px solid hsl(var(--color-purple))',
+                      border: '3px solid hsl(var(--color-purple))',
                       transform: 'translateX(-50%)',
                       zIndex: 2,
                     }}
@@ -221,7 +221,8 @@ export default function Timeline() {
                       textAlign: 'left',
                       position: 'relative',
                       zIndex: 1,
-                      padding: '28px',
+                      padding: '24px',
+                      border: '1px solid hsl(var(--border-color))',
                     }}
                   >
                     {/* Badge & Semester */}
@@ -231,8 +232,8 @@ export default function Timeline() {
                         alignItems: 'center',
                         justifyContent: 'space-between',
                         gap: '12px',
-                        marginBottom: '14px',
-                        fontSize: '0.85rem',
+                        marginBottom: '12px',
+                        fontSize: '0.8rem',
                         flexWrap: 'wrap',
                       }}
                     >
@@ -245,40 +246,30 @@ export default function Timeline() {
                           gap: '6px',
                         }}
                       >
-                        <Calendar size={14} />
+                        <Calendar size={12} />
                         {project.semester}
                       </span>
                       <span
                         className="badge badge-purple"
                         style={{
-                          fontSize: '0.7rem',
-                          backgroundColor:
-                            project.category === 'ai'
-                              ? 'hsl(var(--color-blue) / 0.1)'
-                              : project.category === 'design'
-                              ? 'hsl(var(--color-orange) / 0.1)'
-                              : 'hsl(var(--color-purple) / 0.1)',
-                          color:
-                            project.category === 'ai'
-                              ? 'hsl(var(--color-blue))'
-                              : project.category === 'design'
-                              ? 'hsl(var(--color-orange))'
-                              : 'hsl(var(--color-purple))',
+                          fontSize: '0.65rem',
+                          backgroundColor: 'hsl(var(--color-purple) / 0.08)',
+                          color: 'hsl(var(--color-purple))',
                         }}
                       >
                         {project.categoryLabel}
                       </span>
                     </div>
 
-                    <h3 style={{ fontSize: '1.3rem', marginBottom: '8px', fontWeight: 700 }}>
+                    <h3 style={{ fontSize: '1.15rem', marginBottom: '6px', fontWeight: 700 }}>
                       {project.title}
                     </h3>
                     
-                    <div style={{ fontSize: '0.85rem', color: 'hsl(var(--text-muted))', marginBottom: '12px' }}>
+                    <div style={{ fontSize: '0.8rem', color: 'hsl(var(--text-muted))', marginBottom: '10px' }}>
                       Peran: <strong>{project.role}</strong>
                     </div>
 
-                    <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '20px', fontSize: '0.95rem', lineHeight: 1.5 }}>
+                    <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '16px', fontSize: '0.85rem', lineHeight: 1.5 }}>
                       {project.description}
                     </p>
 
@@ -286,13 +277,13 @@ export default function Timeline() {
                     {project.achievements && (
                       <div
                         style={{
-                          padding: '10px 14px',
-                          backgroundColor: 'hsl(var(--color-green) / 0.08)',
-                          borderLeft: '3px solid hsl(var(--color-green))',
-                          borderRadius: '0 var(--radius-sm) var(--radius-sm) 0',
-                          fontSize: '0.85rem',
-                          color: 'hsl(var(--color-green))',
-                          marginBottom: '20px',
+                          padding: '8px 12px',
+                          backgroundColor: 'hsl(var(--color-purple) / 0.04)',
+                          borderLeft: '3px solid hsl(var(--color-purple))',
+                          borderRadius: '0 4px 4px 0',
+                          fontSize: '0.8rem',
+                          color: 'hsl(var(--color-purple))',
+                          marginBottom: '16px',
                           fontWeight: 500,
                         }}
                       >
@@ -301,13 +292,13 @@ export default function Timeline() {
                     )}
 
                     {/* Technologies Badges */}
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                       {project.techs.map((tech, tIdx) => (
                         <span
                           key={tIdx}
                           style={{
-                            fontSize: '0.75rem',
-                            padding: '4px 8px',
+                            fontSize: '0.7rem',
+                            padding: '3px 6px',
                             borderRadius: '4px',
                             backgroundColor: 'hsl(var(--bg-secondary))',
                             color: 'hsl(var(--text-secondary))',
@@ -317,7 +308,7 @@ export default function Timeline() {
                             gap: '4px',
                           }}
                         >
-                          <Tag size={10} />
+                          <Tag size={8} />
                           {tech}
                         </span>
                       ))}
