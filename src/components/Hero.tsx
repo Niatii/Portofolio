@@ -59,11 +59,7 @@ export default function Hero() {
             >
               Membangun Web,{" "}
               <span style={{ color: "hsl(var(--color-purple))" }}>
-                Integrasi AI
-              </span>
-              , &{" "}
-              <span style={{ color: "hsl(var(--color-purple))" }}>
-                UI/UX Desain
+                Integrasi AI & UI/UX Desain
               </span>{" "}
               secara Presisi.
             </h1>
@@ -168,16 +164,14 @@ export default function Hero() {
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <div
               style={{
-                width: "100%",
-                maxWidth: "340px",
-                aspectRatio: "1 / 1.15",
-                borderRadius: "var(--radius-lg)",
+                width: "280px",
+                height: "280px",
+                borderRadius: "50%",
                 overflow: "hidden",
-                border: "1px solid hsl(var(--border-color))",
+                border: "4px solid hsl(var(--color-purple) / 0.15)",
                 boxShadow: "var(--shadow-lg)",
                 backgroundColor: "hsl(var(--bg-card))",
               }}
-              className="about-visual-container"
             >
               <img
                 src={photoImg}
@@ -189,7 +183,7 @@ export default function Hero() {
                   display: "block",
                   transition: "transform var(--transition-slow)",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
                 onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
               />
             </div>
