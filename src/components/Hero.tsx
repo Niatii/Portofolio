@@ -28,24 +28,6 @@ export default function Hero() {
         >
           {/* Hero Left Content */}
           <div style={{ textAlign: "left" }}>
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "4px 12px",
-                borderRadius: "var(--radius-sm)",
-                backgroundColor: "hsl(var(--color-purple) / 0.08)",
-                border: "1px solid hsl(var(--color-purple) / 0.15)",
-                color: "hsl(var(--color-purple))",
-                fontSize: "0.8rem",
-                fontWeight: 600,
-                marginBottom: "20px",
-              }}
-            >
-              <span>FRESH GRADUATE PORTFOLIO</span>
-            </div>
-
             <h1
               style={{
                 fontSize: "3rem",
@@ -154,14 +136,20 @@ export default function Hero() {
                     color: "hsl(var(--text-muted))",
                   }}
                 >
-                  Karya Semester
+                  Karya Akademik & Kompetisi
                 </div>
               </div>
             </div>
           </div>
 
           {/* User Profile Photo on Right */}
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <div
               style={{
                 width: "280px",
@@ -183,8 +171,12 @@ export default function Hero() {
                   display: "block",
                   transition: "transform var(--transition-slow)",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.04)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
               />
             </div>
           </div>

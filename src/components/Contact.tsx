@@ -1,5 +1,4 @@
-import React from 'react';
-import { Mail, Send, FileText, CheckCircle2 } from 'lucide-react';
+import { Mail, FileText } from 'lucide-react';
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg
@@ -34,27 +33,22 @@ const LinkedinIcon = ({ size = 20 }: { size?: number }) => (
 );
 
 export default function Contact() {
-  const [formData, setFormData] = React.useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [submitted, setSubmitted] = React.useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (formData.name && formData.email && formData.message) {
-      // Simulate form submission
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setSubmitted(false), 5000);
-    }
-  };
-
   return (
     <section id="contact" className="section" style={{ backgroundColor: 'hsl(var(--bg-secondary) / 0.4)' }}>
       <div className="container">
-        <div className="section-header">
+        <div
+          className="card"
+          style={{
+            maxWidth: '600px',
+            margin: '0 auto',
+            padding: '40px',
+            textAlign: 'center',
+            backgroundColor: 'hsl(var(--bg-card))',
+            border: '1px solid hsl(var(--border-color))',
+            borderRadius: 'var(--radius-md)',
+          }}
+        >
+          {/* Badge */}
           <div
             style={{
               display: 'inline-flex',
@@ -72,288 +66,104 @@ export default function Contact() {
             <Mail size={12} />
             <span>HUBUNGI SAYA</span>
           </div>
-          <h2>Mari Kolaborasi & Berkarya Bersama</h2>
-          <p>
-            Tertarik untuk merekrut, bekerja sama dalam proyek AI/Web Dev, atau sekadar berdiskusi tentang UI/UX? Hubungi saya kapan saja!
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '12px' }}>
+            Mari Kolaborasi & Berkarya Bersama
+          </h2>
+          
+          <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '32px', fontSize: '0.9rem', lineHeight: 1.6 }}>
+            Tertarik untuk merekrut, bekerja sama dalam proyek AI/Web Dev, atau sekadar berdiskusi tentang UI/UX? Silakan hubungi saya melalui jalur resmi di bawah ini.
           </p>
-        </div>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '32px',
-            alignItems: 'stretch',
-            maxWidth: '960px',
-            margin: '0 auto',
-          }}
-          className="contact-grid"
-        >
-          {/* Left Column: Direct Links Card */}
-          <div
-            className="card"
-            style={{
-              padding: '36px',
-              backgroundColor: 'hsl(var(--bg-card))',
-              textAlign: 'left',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              height: '100%',
-              border: '1px solid hsl(var(--border-color))',
-            }}
-          >
-            <div>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 600, marginBottom: '12px' }}>
-                Informasi Kontak
-              </h3>
-              <p style={{ color: 'hsl(var(--text-secondary))', marginBottom: '28px', fontSize: '0.85rem', lineHeight: 1.6 }}>
-                Silakan hubungi saya melalui jalur resmi di bawah ini untuk peluang karir, kolaborasi proyek, atau sekadar berdiskusi.
-              </p>
-
-              {/* List of clean contact links */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '24px' }}>
-                <a
-                  href="mailto:niatiniati545@gmail.com"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '14px',
-                    color: 'hsl(var(--text-primary))',
-                  }}
-                  className="contact-link-row"
-                >
-                  <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Mail size={18} />
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>Email Resmi</div>
-                    <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>niatiniati545@gmail.com</div>
-                  </div>
-                </a>
-
-                <a
-                  href="https://linkedin.com/in/niatii"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '14px',
-                    color: 'hsl(var(--text-primary))',
-                  }}
-                  className="contact-link-row"
-                >
-                  <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <LinkedinIcon size={18} />
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>LinkedIn</div>
-                    <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>linkedin.com/in/niatii</div>
-                  </div>
-                </a>
-
-                <a
-                  href="https://github.com/Niatii"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '14px',
-                    color: 'hsl(var(--text-primary))',
-                  }}
-                  className="contact-link-row"
-                >
-                  <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <GithubIcon size={18} />
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>GitHub</div>
-                    <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>github.com/Niatii</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            {/* Resume CV Download sleeker section */}
-            <div
+          {/* List of clean contact links */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px', textAlign: 'left', maxWidth: '380px', margin: '0 auto 32px' }}>
+            <a
+              href="mailto:niatiniati545@gmail.com"
               style={{
-                borderTop: '1px solid hsl(var(--border-color))',
-                paddingTop: '24px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '14px',
+                color: 'hsl(var(--text-primary))',
               }}
+              className="contact-link-row"
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-                <FileText size={18} style={{ color: 'hsl(var(--color-purple))' }} />
-                <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>Unduh Curriculum Vitae</span>
+              <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Mail size={18} />
               </div>
-              <button
-                className="btn btn-primary btn-sm"
-                style={{ width: '100%', borderRadius: 'var(--radius-sm)' }}
-                onClick={() => alert('Unduh CV: Berkas CV_Niati.pdf akan segera diunduh.')}
-              >
-                Unduh CV (PDF)
-              </button>
-            </div>
+              <div>
+                <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>Email Resmi</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>niatiniati545@gmail.com</div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/niati/"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '14px',
+                color: 'hsl(var(--text-primary))',
+              }}
+              className="contact-link-row"
+            >
+              <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <LinkedinIcon size={18} />
+              </div>
+              <div>
+                <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>LinkedIn</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>linkedin.com/in/niati</div>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/Niatii"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '14px',
+                color: 'hsl(var(--text-primary))',
+              }}
+              className="contact-link-row"
+            >
+              <div style={{ padding: '8px', borderRadius: 'var(--radius-sm)', backgroundColor: 'hsl(var(--color-purple) / 0.08)', color: 'hsl(var(--color-purple))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <GithubIcon size={18} />
+              </div>
+              <div>
+                <div style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))' }}>GitHub</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>github.com/Niatii</div>
+              </div>
+            </a>
           </div>
 
-          {/* Right Column: Contact Form */}
+          {/* Resume CV Download sleeker section */}
           <div
-            className="card"
             style={{
-              padding: '36px',
-              backgroundColor: 'hsl(var(--bg-card))',
-              border: '1px solid hsl(var(--border-color))',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
+              borderTop: '1px solid hsl(var(--border-color))',
+              paddingTop: '24px',
+              maxWidth: '380px',
+              margin: '0 auto',
             }}
           >
-            <h3 style={{ fontSize: '1.3rem', fontWeight: 600, marginBottom: '20px', textAlign: 'left' }}>
-              Kirim Pesan
-            </h3>
-
-            {submitted ? (
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '40px 0',
-                  textAlign: 'center',
-                }}
-              >
-                <CheckCircle2 size={40} style={{ color: 'hsl(var(--color-green))', marginBottom: '12px' }} />
-                <h4 style={{ fontSize: '1.15rem', fontWeight: 600, marginBottom: '6px', color: 'hsl(var(--color-green))' }}>
-                  Pesan Terkirim!
-                </h4>
-                <p style={{ color: 'hsl(var(--text-secondary))', fontSize: '0.85rem' }}>
-                  Terima kasih atas pesan Anda. Saya akan segera menghubungi Anda kembali secepatnya.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px', textAlign: 'left' }}>
-                <div>
-                  <label
-                    htmlFor="name"
-                    style={{
-                      display: 'block',
-                      fontSize: '0.8rem',
-                      fontWeight: 600,
-                      marginBottom: '6px',
-                      color: 'hsl(var(--text-primary))',
-                    }}
-                  >
-                    Nama Lengkap
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Masukkan nama Anda"
-                    style={{
-                      width: '100%',
-                      padding: '10px 14px',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid hsl(var(--border-color))',
-                      backgroundColor: 'hsl(var(--bg-primary))',
-                      color: 'hsl(var(--text-primary))',
-                      outline: 'none',
-                      fontFamily: 'var(--font-sans)',
-                      fontSize: '0.85rem',
-                    }}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    style={{
-                      display: 'block',
-                      fontSize: '0.8rem',
-                      fontWeight: 600,
-                      marginBottom: '6px',
-                      color: 'hsl(var(--text-primary))',
-                    }}
-                  >
-                    Email Kontak
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="nama@email.com"
-                    style={{
-                      width: '100%',
-                      padding: '10px 14px',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid hsl(var(--border-color))',
-                      backgroundColor: 'hsl(var(--bg-primary))',
-                      color: 'hsl(var(--text-primary))',
-                      outline: 'none',
-                      fontFamily: 'var(--font-sans)',
-                      fontSize: '0.85rem',
-                    }}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    style={{
-                      display: 'block',
-                      fontSize: '0.8rem',
-                      fontWeight: 600,
-                      marginBottom: '6px',
-                      color: 'hsl(var(--text-primary))',
-                    }}
-                  >
-                    Pesan Anda
-                  </label>
-                  <textarea
-                    id="message"
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tuliskan pesan atau detail penawaran kerja sama..."
-                    style={{
-                      width: '100%',
-                      padding: '10px 14px',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid hsl(var(--border-color))',
-                      backgroundColor: 'hsl(var(--bg-primary))',
-                      color: 'hsl(var(--text-primary))',
-                      outline: 'none',
-                      resize: 'vertical',
-                      fontFamily: 'var(--font-sans)',
-                      fontSize: '0.85rem',
-                      lineHeight: 1.5,
-                    }}
-                  />
-                </div>
-
-                <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '4px' }}>
-                  Kirim Pesan <Send size={14} />
-                </button>
-              </form>
-            )}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '16px' }}>
+              <FileText size={18} style={{ color: 'hsl(var(--color-purple))' }} />
+              <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>Unduh Curriculum Vitae</span>
+            </div>
+            <button
+              className="btn btn-primary btn-sm"
+              style={{ width: '100%', borderRadius: 'var(--radius-sm)' }}
+              onClick={() => alert('Unduh CV: Berkas CV_Niati.pdf akan segera diunduh.')}
+            >
+              Unduh CV (PDF)
+            </button>
           </div>
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 768px) {
-          .contact-grid {
-            grid-template-columns: 1fr !important;
-            gap: 24px !important;
-          }
-        }
         .contact-link-row {
           transition: transform var(--transition-fast) !important;
         }
