@@ -225,7 +225,7 @@ export default function About() {
                 lineHeight: 1.3,
               }}
             >
-              Memadukan Desain Fungsional dengan Kekuatan Kode & AI
+              Memadukan Desain Fungsional dengan Kekuatan Kode
             </h3>
             <p
               style={{
