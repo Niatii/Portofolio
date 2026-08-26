@@ -3,7 +3,6 @@ import {
   Trophy,
   Star,
   BookOpen,
-  Award,
   CheckCircle,
   ExternalLink,
 } from "lucide-react";

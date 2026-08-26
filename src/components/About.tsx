@@ -1,4 +1,4 @@
-import { Award, Briefcase, GraduationCap, Mail } from "lucide-react";
+import { Award, Briefcase, GraduationCap } from "lucide-react";
 import photoImg from "../assets/Foto_Niati.jpeg";
 
 const GithubIcon = ({ size = 18 }: { size?: number }) => (
